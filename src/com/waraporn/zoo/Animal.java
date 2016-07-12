@@ -49,10 +49,11 @@ public class Animal {
     }
 
     protected void deleteAnimal(int id){
-
+        //check id and del
     }
 
     public String listAnimal(){
+        //list of animal all in zoo
         return "";
     }
 }
