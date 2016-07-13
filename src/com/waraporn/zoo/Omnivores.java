@@ -9,15 +9,17 @@ public class Omnivores extends Animal implements HerbFood,MeatFood{
 
     }
 
-    @Override
-    public void feedingHerb() {
+    public void feedingHerb(String name) {
         //feeding herb for animals.
-
+        System.out.println("***************************");
+        System.out.println("feeding 'HERB' for " + name);
     }
 
     @Override
-    public void feedingMeat() {
+    public void feedingMeat(String name) {
         //feeding meat for animals.
+        System.out.println("feeding 'MEAT' for " + name);
+        System.out.println("***************************");
 
     }
 }

@@ -10,21 +10,43 @@ public class Staff {
 
     List<Animal> animals = new ArrayList<>();
 
-    public void addAnimal(int id, String name, String type){
+    public void addAnimal(int id, String name, String type) {
         //add new animal information.
+        animals.add(new Animal(id, name, type));
     }
 
-    public void deleteAnimal(int id){
+    public void deleteAnimal(int id) {
         //select animal that has this id and delete it.
+        animals.remove(id);
     }
 
-    public List<Animal> listAnimalAll(){
+    public List<Animal> listAnimalAll() {
         //list all animal in zoo.
-
+        for (int i = 0; i < animals.size(); i++) {
+            System.out.println(animals.get(i).toString());
+        }
+        System.out.println("------------------------------------");
         return animals;
     }
 
-    public static void main(String [] args){
+    public void feedingFood(List<Animal> animal){
+
+        for (int i = 0; i < animal.size(); i++) {
+            if (animal.get(i).getType() == "Herbivores") {
+                Herbivores h = new Herbivores();
+                h.feedingHerb(animal.get(i).getName());
+            } else if (animal.get(i).getType() == "Omnivores") {
+                Omnivores o = new Omnivores();
+                o.feedingHerb(animal.get(i).getName());
+                o.feedingMeat(animal.get(i).getName());
+            } else if (animal.get(i).getType() == "Carnivores") {
+                Carnivores c = new Carnivores();
+                c.feedingMeat(animal.get(i).getName());
+            }
+        }
+    }
+
+    public static void main(String[] args) {
 
         Staff a = new Staff();
         a.addAnimal(1, "Fish", "Carnivores");
@@ -36,5 +58,25 @@ public class Staff {
         a.deleteAnimal(2);
 
         a.listAnimalAll();
+
+
+//        Animal animal1 = new Animal(6, "Buffalo", "Herbivores");
+//        Animal animal2 = new Animal(7, "Tiger", "Carnivores");
+//        Animal animal3 = new Animal(8, "Bear", "Omnivores");
+//
+//        List<Animal> animals = new ArrayList<>();
+//        animals.add(animal1);
+//        animals.add(animal2);
+//        animals.add(animal3);
+
+        a.addAnimal(6, "Buffalo", "Herbivores");
+        a.addAnimal(7, "Tiger", "Carnivores");
+        a.addAnimal(8, "Bear", "Omnivores");
+
+        //a.feedingFood(animals);
+
+        a.deleteAnimal(2);
+
+        a.feedingFood(a.listAnimalAll());
     }
 }

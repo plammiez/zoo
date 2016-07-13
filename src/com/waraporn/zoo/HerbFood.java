@@ -5,5 +5,6 @@ package com.waraporn.zoo;
  */
 public interface HerbFood {
 
-    void feedingHerb();
+    void feedingHerb(String name);
+
 }

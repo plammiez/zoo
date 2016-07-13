@@ -9,6 +9,12 @@ public class Animal {
     private String name;
     private String type;
 
+    @Override
+    public String toString() {
+        return "Animal-ID: "+ id + " Name: "+ name + " Type: " + type;
+    }
+
+
     public Animal() {
 
     }

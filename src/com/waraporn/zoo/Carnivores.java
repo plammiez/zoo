@@ -12,8 +12,10 @@ public class Carnivores extends Animal implements MeatFood{
     }
 
     @Override
-    public void feedingMeat() {
+    public void feedingMeat(String name) {
         //feeding meat for animals.
-
+        System.out.println("***************************");
+        System.out.println("feeding 'MEAT' for " + name);
+        System.out.println("***************************");
     }
 }

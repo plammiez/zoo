@@ -11,9 +11,11 @@ public class Herbivores extends Animal implements HerbFood{
 
     }
 
-    @Override
-    public void feedingHerb() {
+    public void feedingHerb(String name) {
         //feeding herb for animals.
-
+        System.out.println("***************************");
+        System.out.println("feeding 'HERB' for " + name);
+        System.out.println("***************************");
     }
+
 }
