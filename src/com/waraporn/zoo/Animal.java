@@ -10,6 +10,17 @@ public class Animal {
     private String type;
     private int age;
 
+    public Animal() {
+
+    }
+
+    public Animal(int id, String name, String type, int age) {
+        this.id = id;
+        this.name = name;
+        this.type = type;
+        this.age = age;
+    }
+
     public int getId() {
         return id;
     }
@@ -42,18 +53,5 @@ public class Animal {
         this.age = age;
     }
 
-    protected void addAnimal(String name, String type, int age){
-        this.name = name;
-        this.type = type;
-        this.age = age;
-    }
 
-    protected void deleteAnimal(int id){
-        //check id and del
-    }
-
-    public String listAnimal(){
-        //list of animal all in zoo
-        return "";
-    }
 }
