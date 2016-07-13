@@ -19,7 +19,7 @@ public class Animal {
         String ans = "ID: "+ id + " Name: "+ name + " Type: " + type;
         return ans;
     }
-
+    
     public Animal(int id, String name, String type) {
         this.id = id;
         this.name = name;

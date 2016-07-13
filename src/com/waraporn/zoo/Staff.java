@@ -58,20 +58,24 @@ public class Staff {
 
         a.listAnimalAll();
 
-        Animal animal1 = new Animal(6, "Buffalo", "Herbivores");
-        Animal animal2 = new Animal(7, "Tiger", "Carnivores");
-        Animal animal3 = new Animal(8, "Bear", "Omnivores");
+//        Animal animal1 = new Animal(6, "Buffalo", "Herbivores");
+//        Animal animal2 = new Animal(7, "Tiger", "Carnivores");
+//        Animal animal3 = new Animal(8, "Bear", "Omnivores");
+//
+//        List<Animal> animals = new ArrayList<>();
+//        animals.add(animal1);
+//        animals.add(animal2);
+//        animals.add(animal3);
 
-        List<Animal> animals = new ArrayList<>();
-        animals.add(animal1);
-        animals.add(animal2);
-        animals.add(animal3);
+        a.addAnimal(6, "Buffalo", "Herbivores");
+        a.addAnimal(7, "Tiger", "Carnivores");
+        a.addAnimal(8, "Bear", "Omnivores");
 
-        a.feedingFood(animals);
+        //a.feedingFood(animals);
 
         a.deleteAnimal(2);
 
-        a.listAnimalAll();
+        a.feedingFood(a.listAnimalAll());
     }
 
 
