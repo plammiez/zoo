@@ -9,14 +9,13 @@ public class Animal {
     private String name;
     private String type;
 
-    public Animal() {
-
-    }
-
     @Override
     public String toString() {
-        //return super.toString();
         return "Animal-ID: "+ id + " Name: "+ name + " Type: " + type;
+    }
+
+    public Animal() {
+
     }
 
     public Animal(int id, String name, String type) {
