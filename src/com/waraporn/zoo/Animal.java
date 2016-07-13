@@ -14,7 +14,6 @@ public class Animal {
         return "Animal-ID: "+ id + " Name: "+ name + " Type: " + type;
     }
 
-
     public Animal() {
 
     }

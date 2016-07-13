@@ -16,8 +16,8 @@ public class Staff {
     }
 
     public void deleteAnimal(int id) {
-        //select animal that has this id and delete it.
-        animals.remove(id);
+        //select animal by id and delete it.
+        animals.remove(id-1);
     }
 
     public List<Animal> listAnimalAll() {
@@ -30,7 +30,6 @@ public class Staff {
     }
 
     public void feedingFood(List<Animal> animal){
-
         for (int i = 0; i < animal.size(); i++) {
             if (animal.get(i).getType() == "Herbivores") {
                 Herbivores h = new Herbivores();
@@ -55,10 +54,9 @@ public class Staff {
         a.addAnimal(4, "Cow", "Herbivores");
         a.addAnimal(5, "Rabbit", "Herbivores");
 
-        a.deleteAnimal(2);
-
         a.listAnimalAll();
 
+        a.deleteAnimal(3);
 
 //        Animal animal1 = new Animal(6, "Buffalo", "Herbivores");
 //        Animal animal2 = new Animal(7, "Tiger", "Carnivores");
@@ -74,8 +72,6 @@ public class Staff {
         a.addAnimal(8, "Bear", "Omnivores");
 
         //a.feedingFood(animals);
-
-        a.deleteAnimal(2);
 
         a.feedingFood(a.listAnimalAll());
     }

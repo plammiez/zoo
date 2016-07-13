@@ -20,6 +20,5 @@ public class Omnivores extends Animal implements HerbFood,MeatFood{
         //feeding meat for animals.
         System.out.println("feeding 'MEAT' for " + name);
         System.out.println("***************************");
-
     }
 }
