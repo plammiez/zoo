@@ -8,17 +8,15 @@ public class Animal {
     private  int id;
     private String name;
     private String type;
-    private int age;
 
     public Animal() {
 
     }
 
-    public Animal(int id, String name, String type, int age) {
+    public Animal(int id, String name, String type) {
         this.id = id;
         this.name = name;
         this.type = type;
-        this.age = age;
     }
 
     public int getId() {
@@ -44,14 +42,5 @@ public class Animal {
     public void setType(String type) {
         this.type = type;
     }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
 
 }

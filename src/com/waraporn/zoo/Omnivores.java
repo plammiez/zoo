@@ -11,11 +11,13 @@ public class Omnivores extends Animal implements HerbFood,MeatFood{
 
     @Override
     public void feedingHerb() {
+        //feeding herb for animals.
 
     }
 
     @Override
     public void feedingMeat() {
+        //feeding meat for animals.
 
     }
 }

@@ -13,6 +13,7 @@ public class Herbivores extends Animal implements HerbFood{
 
     @Override
     public void feedingHerb() {
+        //feeding herb for animals.
 
     }
 }
