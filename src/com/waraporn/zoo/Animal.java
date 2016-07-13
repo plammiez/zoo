@@ -16,10 +16,9 @@ public class Animal {
     @Override
     public String toString() {
         //return super.toString();
-        String ans = "ID: "+ id + " Name: "+ name + " Type: " + type;
-        return ans;
+        return "Animal-ID: "+ id + " Name: "+ name + " Type: " + type;
     }
-    
+
     public Animal(int id, String name, String type) {
         this.id = id;
         this.name = name;
